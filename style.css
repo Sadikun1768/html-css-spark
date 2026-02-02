@@ -5,7 +5,9 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  overflow: scroll;
+  
+
 }
 
 
@@ -287,9 +289,8 @@ padding-right: 200px;
 }
 /*  Partners Benefits  */
 .container{
-   margin-top: 10px;
    width: 100%;
-   padding: 0 15px; /* mobile safe */
+   padding: 0 10px; /* mobile safe */
 }
 
 .p-text h2{
@@ -740,9 +741,7 @@ font-family: sans-serif;
     padding: 20px;
 }
 .footer-address ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 5px 10px;
 }
 
 .footer-address ul li{
@@ -750,10 +749,10 @@ font-family: sans-serif;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.5;
-    padding-right: 5px 40px;
+
+ 
 }
 
 .footer-address ul li img{
@@ -784,11 +783,17 @@ font-family: sans-serif;
   .menu {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+  
+  }
+
+  .menu ul li{
+    
+  
   }
 
   .navs-btns {
     flex-direction: column;
+
   }
 
   /* Hero */
@@ -927,6 +932,7 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+ 
 
   }
   .footer-address ul{
@@ -948,13 +954,15 @@ img {
       
       text-align: center;
       max-width: 90%;
+      overflow: hidden;
+     
        
   }
 
   .fter-f{
     justify-content: center;
     text-align: center;
-   padding-right: 25px;
+    padding-right: 25px;
   }
   
 }
