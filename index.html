@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    
 </head>
 <body>
 
@@ -51,23 +53,31 @@
 
     <!-- Hero Section -->
     
+ <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="blog-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="blog-4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="blog-recent-1.jpg" />
+      </div>
+     </div>
+     <!--  CENTER CONTENT -->
+    <div class="hero-content">
+        <h1>2nd Hotel operations and Staffing Management</h1>
+        <p>
+        From seamless operations to tailored staffing,
+        we're your one-stop solution for exceptional hospitality management.
+        </p>
+        <button type="button" class="hero-btn">Fix a Meeting</button>
+    </div>
 
-   <div class="hero">
-  <div class="slides-container">
-    <div class="slide"><img src="blog-2.jpg" alt=""></div>
-    <div class="slide"><img src="blog-4.jpg" alt=""></div>
-    <div class="slide"><img src="blog-recent-1.jpg" alt=""></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-
-  <div class="hero-content">
-    <h1>2nd Hotel operations and Staffing Management</h1>
-    <p>From seamless operations to tailored staffing, we're your one-stop solution for exceptional hospitality management.</p>
-    <button class="hero-btn">Fix a Meeting</button>
-  </div>
-
-  <button class="arrow left" onclick="plusSlide(-1)">&#10094;</button>
-  <button class="arrow right" onclick="plusSlide(1)">&#10095;</button>
-</div>
 
 
 
@@ -581,35 +591,26 @@
 
 <!--------End Footer  Section-------->
 
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-<!-- Slider JS -->
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showSlide(index){
-    const total = slides.length;
-    if(index >= total) currentSlide = 0;
-    else if(index < 0) currentSlide = total - 1;
-    else currentSlide = index;
-
-    const container = document.querySelector('.slides-container');
-    container.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-// Arrow navigation
-function plusSlide(n){
-    showSlide(currentSlide + n);
-}
-
-// Auto-slide every 4 seconds
-setInterval(() => {
-    showSlide(currentSlide + 1);
-}, 4000);
-
-// Initial display
-showSlide(currentSlide);
+  <!-- Initialize Swiper -->
+  <script>
+  const swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
 </script>
+
+
 
 
 
