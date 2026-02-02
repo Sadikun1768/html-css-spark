@@ -29,7 +29,7 @@
             </ul>
 
             <!-- Buttons -->
-            <div class="navs-btns">
+            <div class="nav-bar-btns">
                 <a href="#" class="nn-btn">Apply Now</a>
                 <a href="#" class="n-btn">Staff Log In</a>
             </div>
@@ -40,13 +40,36 @@
 
 
     <!--------Hero Section--------->
-    <section class="hero">
+
+    <!-- <section class="hero">
         <div class="hero-content">
             <h1>2nd Hotel operations and Staffing Management</h1>
             <p>From seamless operations to tailored staffing, we're your one-stop solution for exceptional hospitality management.</p>
             <button type="button" class="hero-btn">Fix a Metting</button>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Hero Section -->
+    
+
+   <div class="hero">
+  <div class="slides-container">
+    <div class="slide"><img src="blog-2.jpg" alt=""></div>
+    <div class="slide"><img src="blog-4.jpg" alt=""></div>
+    <div class="slide"><img src="blog-recent-1.jpg" alt=""></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>2nd Hotel operations and Staffing Management</h1>
+    <p>From seamless operations to tailored staffing, we're your one-stop solution for exceptional hospitality management.</p>
+    <button class="hero-btn">Fix a Meeting</button>
+  </div>
+
+  <button class="arrow left" onclick="plusSlide(-1)">&#10094;</button>
+  <button class="arrow right" onclick="plusSlide(1)">&#10095;</button>
+</div>
+
+
 
     <!--------End Hero Section--------->
 
@@ -557,6 +580,36 @@
 </div>
 
 <!--------End Footer  Section-------->
+
+
+<!-- Slider JS -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index){
+    const total = slides.length;
+    if(index >= total) currentSlide = 0;
+    else if(index < 0) currentSlide = total - 1;
+    else currentSlide = index;
+
+    const container = document.querySelector('.slides-container');
+    container.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Arrow navigation
+function plusSlide(n){
+    showSlide(currentSlide + n);
+}
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 4000);
+
+// Initial display
+showSlide(currentSlide);
+</script>
 
 
 
