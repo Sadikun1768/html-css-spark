@@ -17,7 +17,6 @@ body {
 
 /* Navbar */
 .nav-bar {
-
   background: #062141;
 }
 
@@ -33,7 +32,7 @@ body {
 .menu {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 .menu li a {
@@ -49,7 +48,7 @@ body {
 }
 
 /* Buttons */
-.nav-bar-btns {
+.nav-bar-btns a{
   display: flex;
   gap: 10px;
   color: rgb(6, 6, 129);
@@ -57,20 +56,16 @@ body {
 
 .nav-bar-btns .n-btn {
   color: white;
-
 }
 
 .nav-bar-btns .nn-btn {
-
   color: white;
-
 }
 
 .nav-bar-btns a:hover {
   color: aqua;
   background: white;
 }
-
 
 /*End Navbar Section*/
 
