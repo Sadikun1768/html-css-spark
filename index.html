@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
@@ -21,7 +22,7 @@
             </div>
 
             <!-- Menu -->
-            <ul class="menu">
+            <ul class="menu" id="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
@@ -36,7 +37,7 @@
                 <a href="#" class="nn-btn">Apply Now</a>
                 <a href="#" class="n-btn">Staff Log In</a>
             </div>
-
+            <a href="javascript:void(0)" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
         </div> 
     </div>
 
@@ -657,7 +658,14 @@
     <script>
 
 //navber
-
+function toggleMenu() {
+    var mobilemenu = document.getElementById("menu");
+    if(mobilemenu.style.display === "flex"){
+        mobilemenu.style.display = "none";
+    }else{
+        mobilemenu.style.display = "flex";
+    }
+}
 
 //first Swiper
         const swiper2 = new Swiper(".mySwiper2", {
